@@ -25,18 +25,6 @@ export default class Question extends Component {
     return(
       <View style={styles.container}>
       <Text style={styles.questiontext}>What Is The Length Of A Football Field?</Text>
-        <TouchableHighlight
-          style={styles.button}
-          onPress={this.onButtonPress.bind(this)}>
-          <Text style={styles.welcome}>Next</Text>
-        </TouchableHighlight>
-        <TextInput
-        style={styles.input}
-          value={this.state.textdata}
-          onChangeText={(textdata) => {
-            this.setState({textdata})
-          }}
-        />
       </View>
     )
   }
@@ -54,11 +42,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     margin: 10
   },
-  input: {
-    height: 50,
-    width: 1000,
-    padding: 15,
-    backgroundColor: '#70c2d4',
-    color: 'white'
+  choice: {
+    fontSize: 10,
+    textAlign: 'center',
+    margin: 10
   }
 })
