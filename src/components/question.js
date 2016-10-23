@@ -18,7 +18,7 @@ export default class Question extends Component {
   }
 
   onButtonPress(){
-    
+
   }
 
   render(){
@@ -39,15 +39,17 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     padding: 50,
     alignItems: 'center',
-    backgroundColor: '#f5fcff'
+    backgroundColor: '#0a26ba'
   },
   questiontext: {
     fontSize: 20,
     textAlign: 'center',
+    color: '#ffffff',
     margin: 10
   },
   choice: {
     fontSize: 10,
+    color: '#ffffff',
     textAlign: 'center',
     margin: 10
   }
