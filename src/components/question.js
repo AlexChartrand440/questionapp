@@ -17,6 +17,10 @@ export default class Question extends Component {
     };
   }
 
+  onButtonPress(){
+    
+  }
+
   render(){
     return(
       <View style={styles.container}>
