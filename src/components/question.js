@@ -7,7 +7,7 @@ import {
   TextInput
 } from 'react-native'
 
-export default class question extends Component {
+export default class Question extends Component {
 
   constructor(props){
     super(props)
@@ -24,7 +24,7 @@ export default class question extends Component {
   render(){
     return(
       <View style={styles.container}>
-      <Text style={styles.welcome}>Hello</Text>
+      <Text style={styles.questiontext}>What Is The Length Of A Football Field?</Text>
         <TouchableHighlight
           style={styles.button}
           onPress={this.onButtonPress.bind(this)}>
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#f5fcff'
   },
-  welcome: {
+  questiontext: {
     fontSize: 20,
     textAlign: 'center',
     margin: 10
