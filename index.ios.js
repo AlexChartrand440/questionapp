@@ -1,5 +1,5 @@
 /**
- * Sample React Native App
+ * React Native App: QuestionQ
  * https://github.com/facebook/react-native
  * @flow
  */
@@ -7,10 +7,11 @@
 import React, { Component } from 'react';
 import {
   AppRegistry,
-  StyleSheet,
-  Text,
-  View
+  Navigator,
+  StyleSheet
 } from 'react-native';
+
+import question from './src/components/question'
 
 export default class questionapp extends Component {
   render() {
