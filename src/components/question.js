@@ -8,19 +8,15 @@ import {
 } from 'react-native'
 
 export default class Question extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
     this.state = {
       dataSource: ds.cloneWithRows(['100', '200', 'Spaghetti']),
     };
   }
-  onButtonPress(){
-    this.props.navigator.push({
-      id: 'question',
-      passProps: this.state.textdata
-    })
-  }
+
   render(){
     return(
       <View style={styles.container}>
