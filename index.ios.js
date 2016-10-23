@@ -1,5 +1,5 @@
 /**
- * React Native App: QuestionQ
+ * Sample React Native App
  * https://github.com/facebook/react-native
  * @flow
  */
@@ -7,13 +7,31 @@
 import React, { Component } from 'react';
 import {
   AppRegistry,
+  StyleSheet,
+  Text,
   Navigator,
-  StyleSheet
+  View
 } from 'react-native';
 
-import question from './src/components/question'
+import Question from './src/components/Question'
 
 export default class questionapp extends Component {
+
+  navigatorRenderScene(route, navigator){
+  navigator = navigator
+  switch(route.id){
+    case 'question':
+    return(
+      <Question
+        navigator={navigator}
+        titile="How many yards are in a football field?"
+        mdd="October 16"
+        passProps={route.passProps}
+      />
+    )
+  }
+}
+
   render() {
     return (
       <View style={styles.container}>
@@ -37,7 +55,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#14769f',
   },
   welcome: {
     fontSize: 20,
